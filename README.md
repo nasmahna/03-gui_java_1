@@ -3,10 +3,6 @@
 ```
 public class FormDepresiasi extends javax.swing.JFrame {
     StringBuilder sb;
-    int harga;
-    int nilai;
-    int umur;
-    int hasilPerhitungan;
 
     public FormDepresiasi() {
         initComponents();
@@ -16,7 +12,11 @@ public class FormDepresiasi extends javax.swing.JFrame {
     
     
     public void loadHasilPerhitungan() throws HargaTidakBolehKosong, NilaiTidakBolehKosong, UmurTidakBolehKosong{
-        
+        int harga;
+        int nilai;
+        int umur;
+        int hasilPerhitungan;
+    
         try {
             harga = Integer.parseInt(txtHargaPerolehan.getText());
         } catch (NumberFormatException e) {
@@ -44,9 +44,7 @@ public class FormDepresiasi extends javax.swing.JFrame {
         txtHargaPerolehan.setText(null);
         txtNilaiResidu.setText(null);
         txtUmurEkonomis.setText(null);
-        txtTahunAwal.setText(null);
-        txtTahunAkhir.setText(null);
-        taHasil.setText(null);
+        tempathasil.setText(null);
    }
    
    private void bttnHitungMouseClicked(java.awt.event.MouseEvent evt) {                                        
